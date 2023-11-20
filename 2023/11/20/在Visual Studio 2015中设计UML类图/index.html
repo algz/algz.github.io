@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>设计UML类图 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1.UML简介 2.UML类图 2.1 泛化（Generalization） 2.2 实现（Realization） 2.3 关联（Association) 2.4 聚合（Aggregation） 2.5 组合(Composition) 2.6 依赖(Dependency) 1.UML简介 Unified Modeling Language (UML)又称统一建模语言或标准建模语言。 简单说就是以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计UML类图">
+<meta property="og:url" content="http://example.com/2023/11/20/%E5%9C%A8Visual%20Studio%202015%E4%B8%AD%E8%AE%BE%E8%AE%A1UML%E7%B1%BB%E5%9B%BE/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.UML简介 2.UML类图 2.1 泛化（Generalization） 2.2 实现（Realization） 2.3 关联（Association) 2.4 聚合（Aggregation） 2.5 组合(Composition) 2.6 依赖(Dependency) 1.UML简介 Unified Modeling Language (UML)又称统一建模语言或标准建模语言。 简单说就是以">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-11-20T02:16:30.000Z">
+<meta property="article:modified_time" content="2023-11-20T02:19:05.426Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/11/20/%E5%9C%A8Visual%20Studio%202015%E4%B8%AD%E8%AE%BE%E8%AE%A1UML%E7%B1%BB%E5%9B%BE/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '设计UML类图',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-11-20 10:19:05'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">设计UML类图</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-11-20T02:16:30.000Z" title="Created 2023-11-20 10:16:30">2023-11-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-11-20T02:19:05.426Z" title="Updated 2023-11-20 10:19:05">2023-11-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="设计UML类图"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><a href="#9159-1691377664404">1.UML简介</a></p>
+<p><a href="#9628-1661132650235">2.UML类图</a></p>
+<p><a href="#0062-1661132650235">2.1 泛化（Generalization）</a></p>
+<p><a href="#9888-1661132650235">2.2 实现（Realization）</a></p>
+<p><a href="#2831-1661132650235">2.3 关联（Association)</a></p>
+<p><a href="#3588-1661132650236">2.4 聚合（Aggregation）</a></p>
+<p><a href="#1234-1661132650236">2.5 组合(Composition)</a></p>
+<p><a href="#3166-1661132650236">2.6 依赖(Dependency)</a></p>
+<p>1.UML简介</p>
+<p>Unified Modeling Language (UML)又称统一建模语言或标准建模语言。</p>
+<p>简单说就是以图形方式表现模型，根据不同模型进行分类，在UML 2.0中有13种图，以下是他们的主要用途简介：</p>
+<p>1.用例图：对系统的使用方式分类.</p>
+<p>2.类图:显示类和它们的相互关系。</p>
+<p>3.对象图：只显示对象及它们的相互关系。</p>
+<p>4.活动图：显示人或对象的活动，其方式类似于流程图。</p>
+<p>5.状态机图：显示生命周期比较有趣或复杂的对象的各种状态。</p>
+<p>6.通信图：显示在某种情形下对象之间发送的消息。</p>
+<p>7.顺序图：显示与通信图类以的信息，但强调的是顺序，而不是连接。</p>
+<p>8.包图：显示相关的类如何组合，对开发人员有用。</p>
+<p>9.部署图：显示安装已完成系统的机器、过程和部署制品。</p>
+<p>10.组件图：显示可重用的组件（对象或子系统）及期接口。</p>
+<p>11.交互总图：使用顺序图喧赤活动的务个步骤。</p>
+<p>12.时间图：显示消息和对象状态的准确时间限制。</p>
+<p>13.复合结构图：显示对象在聚合或复合中的相互关系，显示接口和协作的对象 </p>
+<p>常用的 UML 图可分静（态）图、动（态）图两类，静态图主要描绘软件的静态结构，而动态图主要描绘软件的动态行为。</p>
+<p>常用 UML 动态图（5 个）：用例图，活动图，状态机图，序列图，通信图。</p>
+<p>常用 UML 静态图（4 个）：类图，包图，部署图，构件图。 </p>
+<p>2.UML类图</p>
+<p>在所有UML图中，类图是使用频率最高的UML图。</p>
+<p>类图用于描述系统中所包含的类以及它们之间的相互关系，帮助人们简化对系统的理解，它是系统分析和设计阶段的重要产物，也是系统编码和测试的重要模型依据。</p>
+<p>类图主要关系有：泛化（Generalization）,  实现（Realization），关联（Association)，聚合（Aggregation），组合(Composition)，依赖(Dependency)</p>
+<p>定义：显示出类、接口以及它们之间的静态结构和关系；它用于描述系统的结构化设计。</p>
+<p>类型：静态图</p>
+<p>应用：设计阶段</p>
+<p>2.1 泛化（Generalization）</p>
+<p>【泛化关系】：是一种继承关系，表示一般与特殊的关系，它指定了子类如何特化父类的所有特征和行为。例如：苹果树是树的一种，即有苹果树的特性也有树的共性。</p>
+<p>【代码体现】：类继承另一个类</p>
+<p>【箭头指向】：带三角箭头的实线，箭头指向父类</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\c6375dbed2d94f70b8d1cc440f2d05b8\11-763401256.png"><br><img src="https://s2.loli.net/2023/11/20/YQI7TjO1aMNCZw5.png" alt="image.png"></p>
+<p>2.2 实现（Realization） </p>
+<p>【实现关系】：是一种类与接口的关系，表示类是接口所有特征和行为的实现.</p>
+<p>【代码体现】：类实现接口成员 </p>
+<p>【箭头指向】：带三角箭头的虚线，箭头指向接口</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\f07a714693234a6f9aab3a94505b1842\83-150061257.png"></p>
+<p> 2.3 关联（Association) </p>
+<p>【关联关系】：是一种拥有的关系，它使一个类知道另一个类的属性和方法； </p>
+<p>【代码体现】：成员变量 </p>
+<p>【箭头及指向】：带普通箭头的实心线，指向被拥有者</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\7548fb247cc64f88af0c2b2478e8f973\8-2013013794.png"></p>
+<p>上图，表示企业和员工的关联关系，员工都属于一个企业</p>
+<p>除此之外，关联关系允许互相关联，比如夫妻关系，可以互相关联。也允许自关联，即自己也是自己的成员之一。 </p>
+<p>2.4 聚合（Aggregation） </p>
+<p>【聚合关系】：是整体与部分的关系，且部分可以离开整体而单独存在。如车和轮胎是整体和部分的关系，轮胎离开车仍然可以存在。 </p>
+<p>                    聚合关系是关联关系的一种，是强的关联关系；关联和聚合在语法上无法区分，必须考察具体的逻辑关系。 </p>
+<p>【代码体现】：成员变量 </p>
+<p>【箭头及指向】：带空心菱形的实心线，菱形指向整体</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\c16dceb7492f493b821f3826ae7aa01a\46-729703098.png"></p>
+<p>2.5 组合(Composition) </p>
+<p>【组合关系】：是整体与部分的关系，但部分不能离开整体而单独存在。如公司和部门是整体和部分的关系，没有公司就不存在部门。 </p>
+<p>                   组合关系是关联关系的一种，是比聚合关系还要强的关系，它要求普通的聚合关系中代表整体的对象负责代表部分的对象的生命周期。 </p>
+<p>【代码体现】：成员变量 </p>
+<p>【箭头及指向】：带实心菱形的实线，菱形指向整体</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\5e75965c98494be68d3849458ba21ffa\6-1763837307.png"></p>
+<p>2.6 依赖(Dependency) </p>
+<p>【依赖关系】：是一种使用的关系，即一个类的实现需要另一个类的协助，所以要尽量不使用双向的互相依赖. </p>
+<p>【代码表现】：局部变量、方法的参数或者对静态方法的调用 </p>
+<p>【箭头及指向】：带箭头的虚线，指向被使用者 </p>
+<p>例如：程序员需要依赖计算机</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\88ecdd54232d437887d140323347c003\86-487259934.png"></p>
+<p>下面这张图是从网上下载的上面各种关系的一个综合图：</p>
+<p> 泛化 &#x3D; 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖 </p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\dd65f5c7521d4e07a946dbd039080da7\9-1349930618.png"></p>
+<p>3.类图中细节符号含义</p>
+<p>UML是一种统一建模语言，在使用过程中就有统一的细节表示，下面是几种通用的表示方法，不论你使用什么工具，总体表示差异不大。</p>
+<p>类：</p>
+<p>抽象类，类名使用用斜体显示。 </p>
+<p>字段、属性、方法：</p>
+<p>‘+’表示public</p>
+<p>‘-’表示private</p>
+<p>‘#’表示protected。 </p>
+<p>接口：</p>
+<p>与类图的区别主要是顶端有&lt;<interface>&gt;显示 ，见上面的示例。</p>
+<p>4.在Visual Stodio 2013&#x2F;2015中创建UML类图</p>
+<p>在.NET开发中，我们可以使用VS自有的功能方便设计类图，VS2013旗舰版和VS2015企业版都有建模工程，下面介绍一下如何使用VS建模</p>
+<p>（1）在VS中新建，选择”建模项目“，如下：</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\077d3bd9ba904fb7b591ded182e1435e\3-1031027942.png"></p>
+<p>（2）打开建模项目，增加一个UML类图</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\a87bf86c8a674380a808c96b8688069e\8-1735412895.png"></p>
+<p>（3）打开新建的UML类图文件，通过工具栏建立类、接口等，并创建关系</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\33a67f08d2074dda9d88cd2ec9bd9078\5-1628497485.png"></p>
+<p>（4）将设计好的UML类图，生成代码</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\9c7edca278544e1e8dcd29ad8e712593\9-1210567830.png"></p>
+<p>（5）查看生成代码</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\fc8e222dce5c4f9e9b6be243f7e4c6ba\7-1124937873.png"></p>
+<p>（6）逆向（由代码生成类图）</p>
+<p>在VS中，我们可以将代码很方便的生成UML类图，如下</p>
+<p><img src="C:\Users\Administrator\AppData\Local\YNote\data\26264060@qq.com\468ccc67da2e4dac84ed6ac57ad80eb6\93-154679558.png"></p>
+<p>5.UML类图工具 </p>
+<p>UML工具比较多，常用的三大UML建模工</p>
+<p>（1）PowerDesign</p>
+<p>（2）Rose</p>
+<p>（3）Visio</p>
+<p>还有一些免费的工具有：</p>
+<p>（1）UMLet</p>
+<p>（2）ArgoUML </p>
+<p>（3）JUDE</p>
+<p>（4）BOUml</p>
+<p>（5）Visual Paradigm</p>
+<p>在线建工具：</p>
+<p><a target="_blank" rel="noopener" href="https://www.processon.com/">https://www.processon.com</a></p>
+<p>根据自己爱好选用吧。 </p>
+<p>6.总结</p>
+<p>本篇主要介绍了UML统一建模语言在面向对象程序设计中如何使用，几种关系的UML类图示例，最后介绍了在.NET开发中，使用VS2013&#x2F;2015建立UML类图及生成代码。主要介绍的是其使用方法，具体使用，需要在不断的了解业务需求的基础上，才能设计出合格的UML图。 </p>
+<p>7.源代码下载:   </p>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/yubinfeng/BlogExamples%20">https://github.com/yubinfeng/BlogExamples</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/11/20/%E5%9C%A8Visual%20Studio%202015%E4%B8%AD%E8%AE%BE%E8%AE%A1UML%E7%B1%BB%E5%9B%BE/">http://example.com/2023/11/20/%E5%9C%A8Visual%20Studio%202015%E4%B8%AD%E8%AE%BE%E8%AE%A1UML%E7%B1%BB%E5%9B%BE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/11/12/hello-world1/" title="hello-world"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">hello-world</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/20/%E5%9C%A8Visual%20Studio%202015%E4%B8%AD%E8%AE%BE%E8%AE%A1UML%E7%B1%BB%E5%9B%BE/" title="设计UML类图">设计UML类图</a><time datetime="2023-11-20T02:16:30.000Z" title="Created 2023-11-20 10:16:30">2023-11-20</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/11/12/hello-world1/" title="hello-world">hello-world</a><time datetime="2023-11-12T05:59:32.000Z" title="Created 2023-11-12 13:59:32">2023-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
